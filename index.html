@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica</title>
+  <link rel="shortcut icon" href="clinic-16.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Página inicial</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Exames</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Contatos</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Funcionários</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="Buscar">
+          <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="clinic-32.png" alt="mdo" width="32" height="32">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--Carousel-->
+    
+    <div id="carousel">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/exame2.jpg" width="1100" height="500">
+            <div class="carousel-caption">
+            <h3>Agendamento de Exames online</h3>
+            </div>
+          </div>
+        <div class="carousel-item">
+            <img src="img/exame1.jpg" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Para agendar, basta preencher o formulário abaixo</h3>
+            </div>
+          </div>
+        <div class="carousel-item">
+            <img src="img/exame3.jpg" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Contamos com uma excelente equipe de funcionários</h3>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a><br>
+        <!-- Carousel controls -->
+      </div>
+
+        <!--Section -->
+    <section>
+      <div> 
+        <!--Formulário-->
+        <form id="form">
+
+            <div class="form-group row"> <!--Digitar nome-->
+                <label for="nome" class="col-md-2">Nome:</label>
+                <input type="text" id="nome" class="col-md-8" placeholder="Digite o seu nome completo"><br>
+            </div>
+
+            <div class="form-group row"> <!--Digitar email-->
+            <label for="email" class="col-md-2">Email:</label>
+            <input type="email" id="email" class="col-md-8" placeholder="Digite o seu e-mail"><br>
+            </div>
+
+            <div class="form-group row"> <!--Digitar CPF-->
+              <label for="cpf" class="col-md-2">CPF:</label>
+              <input type="number" name="cpf" id="cpf" class="col-md-8" placeholder="Digite seu CPF (Ex: 12345678900)"><br>
+            </div>
+
+            <div class="form-group row"> <!--Selecionar data de nascimento-->
+            <label for="data" class="col-md-2">Data do exame:</label>
+            <input type="date" id="data" class="col-md-8"><br>
+            </div>
+
+            <div class="form-group row"> <!--Digitar tipo de exame-->
+              <label for="exame" class="col-md-2">Tipo de exame:</label>
+              <input type="text" id="exame" class="col-md-8" placeholder="Digite o exame desejado"><br>
+            </div>
+
+            <div class="form-group row"> <!--Selecionar horário de exame-->
+            <label for="turno" class="col-md-2">Horário do exame:</label>
+      
+            <select name="turno" id="turno">
+              <option>Manhã: 7:30h até 11:59h</option>
+              <option>Tarde: 13:30h até 17:59h</option>
+              <option>Noite: 18:30h até 5:59h</option>
+            </select>
+      
+            </div> <!--Botões-->
+            <button type="submit" id="salvar" class="btn btn-primary">Salvar</button>
+            <button type="submit" id="consultar" class="btn btn-primary">Consultar</button>
+
+    </section>
+
+    <!--Rodapé-->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Company, Inc</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        </ul>
+      </footer>
+    </div>
+    
+</body>
+</html>
+
+  <!--Script -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function(){
+
+
+    var salvar = document.getElementById("salvar");
+    var form = document.getElementById("form");
+    var consultar = document.getElementById("consultar");
+
+    salvar.addEventListener("click", function(e){
+      e.preventDefault();
+
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value; 
+            var data = document.getElementById("data").value;
+            var cpf = document.getElementById("cpf").value;
+            var exame  = document.getElementById("exame").value;
+            var turno  = document.getElementById("turno");
+
+            var obj = {
+
+            nome : nome,
+            email : email,
+            data : data,
+            cpf:cpf,
+            exame : exame,
+            turno : turno.options[turno.selectedIndex].value
+
+            }
+    
+            localStorage.setItem("Cadastro", JSON.stringify(obj));
+            form.reset();
+            alert(` ${exame} agendado`)
+    });
+
+
+    });
+
+    consultar.addEventListener("click", function(e){
+          e.preventDefault();
+          var dados_str = localStorage.getItem("Cadastro");
+          var dados_obj = JSON.parse(dados_str);
+           
+          document.getElementById("nome").value = dados_obj.nome;
+          document.getElementById("email").value = dados_obj.email;
+          document.getElementById("cpf").value = dados_obj.cpf;
+          document.getElementById("data").value = dados_obj.data;
+          document.getElementById("exame").value = dados_obj.exame;
+          document.getElementById("turno").value = dados_obj.turno;
+
+});
+
+
+    
+</script>
+
+
+<style>
+
+  div.carousel-caption{
+    color: black;
+    font-family: fantasy;
+    background-color: white;
+    opacity: 0.7;
+    width: auto;
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+header{
+  background-color: rgb(145, 255, 255);
+}
+body{
+  background-color:rgb(241, 252, 255);
+  font-family: fantasy;
+}
+
+section{
+  background-color: white;
+  padding: 40px;
+  margin: auto;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  }
+</style>
